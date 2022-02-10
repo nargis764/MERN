@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  
+  margin-left:20px;
+}
+
+.App h1{
+  margin:10px 0;
+}
+
+.list-margin {
+  margin: 10px 0 0 30px;  
+}
+
