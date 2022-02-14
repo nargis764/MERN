@@ -1,0 +1,42 @@
+form {
+    margin-top:20px;
+    height:360px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+form .info {
+    width:360px;      
+    margin:0 auto;
+}
+
+form .info .first-name, 
+form .info .last-name, 
+form .info .email,
+form .info .password,
+form .info .confirm-password
+{
+    width:360px;
+    height:30px;
+    border-radius:5px 5px 5px 5px;    
+    padding: 5px 0;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:lightgray;
+}
+
+form .info .first-name input{
+    width:200px;
+    height:20px;    
+}
+
+.para-margin {
+    margin-top: 0;
+    text-align: left;
+    color:rgb(255, 0, 0);
+}
+
+
+
