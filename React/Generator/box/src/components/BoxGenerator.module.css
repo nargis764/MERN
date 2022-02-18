@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=DM+Sans:wght@400;500&family=Montserrat&display=swap');
+
+.container {
+    min-width:500px;
+    margin:0px auto;
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.form {    
+    margin:30px auto;
+    width:280px;
+    height:200px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    font-size:15px;
+    font-weight: bold; 
+    font-family: 'Montserrat', sans-serif;  
+}
+
+.formElement {    
+    display:flex;    
+    justify-content:space-between;
+    align-items:center;
+}
+
+.formInput {    
+    width:200px; 
+    height:30px;
+    border:2px solid gray;
+    border-radius: 5px; 
+    background-color: lightgray;  
+    padding-left:10px; 
+}
+
+.btn {    
+    width:150px; 
+    height:40px;
+    margin:0px auto;
+    border:2px solid gray;
+    border-radius: 5px;
+    font-size:20px;      
+}
