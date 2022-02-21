@@ -1,0 +1,15 @@
+.btn {
+margin:10px;
+padding:10px 40px;
+font-size:20px;
+}
+
+.message {
+border:1px solid gray;
+width:600px;
+height:200px;
+font-size:20px;
+margin:20px auto;
+text-align:left;
+padding:10px;
+}
