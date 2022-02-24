@@ -1,8 +1,51 @@
+.additem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  height: 40px;
+  margin: 20px auto;
+}
+
+.input {
+  width: 320px;
+  height: 35px;
+  font-size: 20px;
+}
+
+.addbutton {
+  width: 140px;
+  height: 40px;
+  padding: 5px;
+  font-size: 20px;
+}
+
 .tasklist {
-display:flex;
-justify-content: space-between;
-align-items: center;
-width:200px;
-height:40px;
-margin:10px auto;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  background-color: lightgray;
+  width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+}
+.tasks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  height: 40px;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  height: 40px;
+  margin: 10px auto;
+}
+
+.listheading {
+  text-align: center;
+  margin-top: 10px;
 }
