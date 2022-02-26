@@ -13,6 +13,7 @@ const App = () => {
   
 return (
     <div className="App">
+      <h1>Pokemon Names</h1>
       {pokemonList.map((pokemon,index)=>{
         return (
           <div key={pokemon.id}>
