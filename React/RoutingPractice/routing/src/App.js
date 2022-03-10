@@ -11,6 +11,7 @@ const App = () => {
         <Route path="/home" element={<Home/>}/>
         <Route path="/:item" element={<Item/>}/>
         <Route path="/:item/:color1/:color2" element={<Item/>}/>
+        <Route path="/:item/:color1/:color2/:color3" element={<Item/>}/>
       </Routes>      
     </div>
     </BrowserRouter>    
