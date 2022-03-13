@@ -7,7 +7,10 @@ module.exports = {
                 console.log(newProduct)
                 res.json(newProduct)
             })
-            .catch((err) => console.log(err))
+            .catch((err) => {
+                console.log(err);
+                res.status(400).json(err);
+            })
     },
     getAllProducts: (req,res) => {
         Product.find()
@@ -17,4 +20,31 @@ module.exports = {
         })
         .catch((err) => console.log(err))
 },
+getOneProduct: (req,res) => {
+        Product.findById({_id:req.params.id})
+            .then((oneProduct) => {
+                console.log(oneProduct)
+                res.json(oneProduct)
+            })
+            .catch((err) => console.log(err))
+    },
+    deleteOneProduct: (req,res) => {
+        Product.deleteOne({_id:req.params.id})
+            .then((deletedProduct) => {
+                console.log(deletedProduct)
+                res.json(deletedProduct)
+            })
+            .catch((err) => console.log(err))
+    },
+    updateProduct: (req,res) => {
+        Product.updateOne({_id:req.params.id},req.body,{new:true,runValidators:true})
+            .then((updateProduct) => {
+                console.log(updateProduct)
+                res.json(updateProduct)
+            })
+            .catch((err) => {
+                console.log(err);
+                res.status(400).json(err);
+            })
+    }
 }
