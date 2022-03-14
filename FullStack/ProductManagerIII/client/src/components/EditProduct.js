@@ -34,6 +34,9 @@ const EditProduct = (props) => {
             console.log(res);
             navigate("/");
         })
+        .catch((err) => {
+            console.log(err);
+        })
     }
 
 return (
