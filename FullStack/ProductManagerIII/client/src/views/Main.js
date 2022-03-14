@@ -6,7 +6,7 @@ const Main = (props) => {
     const [products, setProducts] = useState([]);
 return (
     <div>
-        <ProductForm/>
+        <ProductForm products = {products} setProducts = {setProducts}/>
         <ProductList products = {products} setProducts = {setProducts}/>
     </div>
 )
