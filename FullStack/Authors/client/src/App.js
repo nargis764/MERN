@@ -1,5 +1,6 @@
 import AuthorList from "./components/AuthorList"
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import EditAuthor from "./components/EditAuthor";
 import './App.css';
 
 const App = () => {
@@ -8,7 +9,8 @@ const App = () => {
 
     <div className="App">
       <Routes>
-        <Route path="/" element={<AuthorList/>}/>        
+        <Route path="/" element={<AuthorList/>}/>
+        <Route path="/new/:id" element={<EditAuthor/>}/>         
       </Routes>      
     </div>
 
