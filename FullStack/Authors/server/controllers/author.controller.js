@@ -21,7 +21,7 @@ module.exports = {
             .catch((err) => console.log(err))
     },
     getOneAuthor: (req,res) => {
-        Author.findById()
+        Author.findById({_id:req.params.id})
             .then((oneAuthor) => {
                 console.log(oneAuthor);
                 res.json(oneAuthor)

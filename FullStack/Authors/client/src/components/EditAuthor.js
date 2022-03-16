@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 const EditAuthor = (props) => {
     const [name,setName] = useState("");
+    const [errors, setErrors] = useState({}); 
     const {id} = useParams();
     const navigate = useNavigate();
 
@@ -11,12 +12,14 @@ const EditAuthor = (props) => {
         axios.get(`http://localhost:8000/api/authors/${id}`)
             .then((res) => {
                 console.log(res)
-                console.log(res.data)
-               // console.log(res.data.name)
-                //need to fix autorefill
+                console.log(res.data);               
                 setName(res.data.name);                             
             })
-            .catch((err) => console.log(err))
+            .catch((err) => {
+                console.log(err)
+                setErrors(err.response.data.errors);
+                }
+            )
     }, [])
 
     const updateAuthor = (e) => {
@@ -36,7 +39,7 @@ const EditAuthor = (props) => {
 return (
     <div className = "w-1/2 mx-auto border bg-white shadow-md rounded px-8 py-5 my-5">
         <h1>Favorite authors</h1> 
-        <form onSubmit = {updateAuthor}>
+        <form onSubmit = {updateAuthor}>            
             <label 
             className = "block text-gray-700 text-lg font-bold mb-2">
             Name
@@ -47,6 +50,11 @@ return (
             value = {name} 
             onChange = {(e) => {setName(e.target.value)}
             }/>
+            {
+                errors.name? 
+                <p>{errors.name.message}</p>
+                :null
+            }
             <button 
             className="px-5 py-1 mx-2 text-sm text-white bg-blue-400 rounded"
             onClick = {() => {navigate("/")}}>
