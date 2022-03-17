@@ -26,15 +26,15 @@ const NewAuthor = (props) => {
     }
 
 return (
-    <div className = "w-1/2 mx-auto border bg-white shadow-md rounded px-8 py-5 my-5">
+    <div className = "w-1/2 mx-auto border bg-white shadow-md rounded px-8 py-5 mt-52">
+        <header>
+            <h1 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Favorite Authors</h1>
+        </header>
         <form onSubmit = {createAuthor}>            
-            <Link to="/">Home</Link>
-            <p>Add a new author:</p>
-            <label className="block text-gray-700 text-lg font-bold mb-2">
-            Name:
-            </label>
+            <Link to="/" className = "font-medium leading-tight text-lg underline mt-0 mb-2 text-blue-600">Home</Link>
+            <p className = "text-purple-600 text-lg">Add a new author:</p>            
             <input 
-            className = "bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 mb-5 text-gray-700 focus:outline-none focus:bg-white focus:border-purple-500" 
+            className = "bg-gray-200 border-2 border-gray-200 rounded w-full py-2 px-4 mt-3 mb-5 text-gray-700 focus:outline-none focus:bg-white focus:border-purple-500" 
             type = "text" 
             value={name} 
             onChange={(e) => {setName(e.target.value)}
