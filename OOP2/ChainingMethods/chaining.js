@@ -22,7 +22,7 @@ class User {
     transferMoney(otherUser, amount) {
         this.accountBalance -= amount;
         otherUser.accountBalance += amount; 
-        
+        return this;        
     }
 }
 
@@ -42,6 +42,6 @@ user3.makeDeposit(3000).makeWithdrawal(1000).makeWithdrawal(500).makeWithdrawal(
 
 //bonus
 // transferMoney
-user1.transferMoney(user3, 500);
-user1.displayBalance();
+user1.transferMoney(user3, 500).displayBalance();
+//user1.displayBalance();
 user3.displayBalance();
