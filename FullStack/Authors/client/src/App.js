@@ -12,7 +12,7 @@ const App = () => {
   
   return (
     <BrowserRouter>
-    <div className="App">
+    <div className = "App">
       <Routes>    
         <Route path = "/" element = {<AuthorList authors={authors} setAuthors={setAuthors}/>}/>
         <Route path = "/new" element = {<NewAuthor/>}/>  

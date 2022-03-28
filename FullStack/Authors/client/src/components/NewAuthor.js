@@ -22,6 +22,7 @@ const NewAuthor = (props) => {
         .catch((err) => {
             console.log(err);
             setErrors(err.response.data.errors);
+           // console.log(err.response.data.code)
         })
     }
 
