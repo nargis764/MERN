@@ -24,8 +24,18 @@ class Ninja {
 }
 
 class Sensei extends Ninja {
-    constructor(name, wisdom) {
+    constructor(name, wisdom = 10) {
         super(name, 200, 10, 10);
         this.wisdom = wisdom;
     }
+
+    speakWisdom() {
+        super.drinkSake();
+        console.log("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
+    }
 }
+
+const sensei1 = new Sensei("Pai Mei");
+
+sensei1.speakWisdom();
+sensei1.showStats();
