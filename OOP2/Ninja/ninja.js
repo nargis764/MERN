@@ -11,10 +11,10 @@ class Ninja {
     }
 
     showStats() {
-        console.log(this.name)
-        console.log(this.health)
-        console.log(this.speed)
-        console.log(this.strength)
+        console.log("Name: " + this.name + ", " + "Health: " + this.health + ", " + "Speed: " + this.speed + ", " + "Strength: " + this.strength )
+        // console.log(this.health)
+        // console.log(this.speed)
+        // console.log(this.strength)
     }
 
     drinkSake() {
@@ -23,6 +23,6 @@ class Ninja {
     }
 }
 
-// const ninja1 = new Ninja("ash", 5);
-// ninja1.showStats();
+//const ninja1 = new Ninja("Ash", 5);
+//ninja1.showStats();
 // ninja1.drinkSake().showStats();
