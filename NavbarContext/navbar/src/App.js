@@ -8,6 +8,7 @@ export const NavbarContext = createContext();
 
 const App = () => {
   const [name,setName] =useState(""); 
+  //
   
   return (
     <div className="App">

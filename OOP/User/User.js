@@ -46,7 +46,8 @@ user3.makeDeposit(3000);
 user3.makeWithdrawal(1000).makeWithdrawal(500).makeWithdrawal(500);
 user3.displayBalance();
 
-//transferMoney
-user1.transferMoney(user2, 500);
+//bonus
+// transferMoney
+user1.transferMoney(user3, 500);
 user1.displayBalance();
-user2.displayBalance();
+user3.displayBalance();
